@@ -21,7 +21,7 @@ namespace TriangleTest
     {
         // 1 Equilateral Triangle
         [Test]
-        public void ValidEquilateralTriangle_Input10and10and10_OutputValidEquilateralTriangle()
+        public void TriangleSolverEquilateralTriangle_Input10and10and10_OutputValidEquilateralTriangle()
         {
             //Arange
             int firstSide = 10;
@@ -39,12 +39,12 @@ namespace TriangleTest
 
         // 3 Isosceles Triangles
         [Test]
-        public void ValidIsoscelesTriangle_Input10and10and15_OutputValidIsoscelesTriangle()
+        public void TriangleSolverValidIsoscelesTriangle_Input20and20and25_OutputValidIsoscelesTriangle()
         {
             //Arange
-            int firstSide = 10;
-            int secondSide = 10;
-            int thirdSide = 15;
+            int firstSide = 20;
+            int secondSide = 20;
+            int thirdSide = 25;
 
             string expected = "The triangle is valid and is an ISOSCELES";
 
@@ -56,12 +56,12 @@ namespace TriangleTest
         }
 
         [Test]
-        public void ValidIsoscelesTriangle_Input5and5and3_OutputValidIsoscelesTriangle()
+        public void TriangleSolverValidIsoscelesTriangle_Input6and6and4_OutputValidIsoscelesTriangle()
         {
             //Arange
-            int firstSide = 5;
-            int secondSide = 5;
-            int thirdSide = 3;
+            int firstSide = 6;
+            int secondSide = 6;
+            int thirdSide = 4;
 
             string expected = "The triangle is valid and is an ISOSCELES";
 
@@ -73,12 +73,12 @@ namespace TriangleTest
         }
 
         [Test]
-        public void ValidIsoscelesTriangle_Input7and7and8_OutputValidIsoscelesTriangle()
+        public void TriangleSolverValidIsoscelesTriangle_Input8and8and9_OutputValidIsoscelesTriangle()
         {
             //Arange
-            int firstSide = 7;
-            int secondSide = 7;
-            int thirdSide = 8;
+            int firstSide = 8;
+            int secondSide = 8;
+            int thirdSide = 9;
 
             string expected = "The triangle is valid and is an ISOSCELES";
 
@@ -91,29 +91,12 @@ namespace TriangleTest
 
         // 5 Scalene Triangles
         [Test]
-        public void ValidScaleneTriangle_Input3and4and5_OutputValidScaleneTriangle()
-        {
-            //Arange
-            int firstSide = 3;
-            int secondSide = 4;
-            int thirdSide = 5;
-
-            string expected = "The triangle is valid and is a SCALENE";
-
-            //Act
-            string result = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
-
-            //Assert
-            Assert.AreEqual(expected, result);
-        }
-
-        [Test]
-        public void ValidScaleneTriangle_Input5and12and13_OutputValidScaleneTriangle()
+        public void TriangleSolverValidScaleneTriangle_Input5and6and7_OutputValidScaleneTriangle()
         {
             //Arange
             int firstSide = 5;
-            int secondSide = 12;
-            int thirdSide = 13;
+            int secondSide = 6;
+            int thirdSide = 7;
 
             string expected = "The triangle is valid and is a SCALENE";
 
@@ -125,28 +108,11 @@ namespace TriangleTest
         }
 
         [Test]
-        public void ValidScaleneTriangle_Input7and24and25_OutputValidScaleneTriangle()
+        public void TriangleSolverValidScaleneTriangle_Input6and16and17_OutputValidScaleneTriangle()
         {
             //Arange
-            int firstSide = 7;
-            int secondSide = 24;
-            int thirdSide = 25;
-
-            string expected = "The triangle is valid and is a SCALENE";
-
-            //Act
-            string result = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
-
-            //Assert
-            Assert.AreEqual(expected, result);
-        }
-
-        [Test]
-        public void ValidScaleneTriangle_Input8and15and17_OutputValidScaleneTriangle()
-        {
-            //Arange
-            int firstSide = 8;
-            int secondSide = 15;
+            int firstSide = 6;
+            int secondSide = 16;
             int thirdSide = 17;
 
             string expected = "The triangle is valid and is a SCALENE";
@@ -159,12 +125,46 @@ namespace TriangleTest
         }
 
         [Test]
-        public void ValidScaleneTriangle_Input9and10and11_OutputValidScaleneTriangle()
+        public void TriangleSolverValidScaleneTriangle_Input7and26and27_OutputValidScaleneTriangle()
+        {
+            //Arange
+            int firstSide = 7;
+            int secondSide = 26;
+            int thirdSide = 27;
+
+            string expected = "The triangle is valid and is a SCALENE";
+
+            //Act
+            string result = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            //Assert
+            Assert.AreEqual(expected, result);
+        }
+
+        [Test]
+        public void TriangleSolverValidScaleneTriangle_Input9and16and18_OutputValidScaleneTriangle()
         {
             //Arange
             int firstSide = 9;
-            int secondSide = 10;
-            int thirdSide = 11;
+            int secondSide = 16;
+            int thirdSide = 18;
+
+            string expected = "The triangle is valid and is a SCALENE";
+
+            //Act
+            string result = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            //Assert
+            Assert.AreEqual(expected, result);
+        }
+
+        [Test]
+        public void TriangleSolverValidScaleneTriangle_Input19and20and21_OutputValidScaleneTriangle()
+        {
+            //Arange
+            int firstSide = 19;
+            int secondSide = 20;
+            int thirdSide = 21;
 
             string expected = "The triangle is valid and is a SCALENE";
 
@@ -177,12 +177,12 @@ namespace TriangleTest
 
         // 3 Tests for Veverifying a Zero Length for One or More Sides
         [Test]
-        public void InvalidTriangle_Input0and5and6_OutputInvalidTriangleWith0()
+        public void TriangleSolverInvalidTriangle_Input0and6and7_OutputInvalidTriangleWith0()
         {
             //Arange
             int firstSide = 0;
-            int secondSide = 5;
-            int thirdSide = 6;
+            int secondSide = 6;
+            int thirdSide = 7;
 
             string expected = "At least one side of your triangle has a zero length and is thus invalid";
 
@@ -194,12 +194,12 @@ namespace TriangleTest
         }
 
         [Test]
-        public void InvalidTriangle_Input0and0and10_OutputInvalidTriangleWith0()
+        public void TriangleSolverInvalidTriangle_Input0and0and15_OutputInvalidTriangleWith0()
         {
             //Arange
             int firstSide = 0;
             int secondSide = 0;
-            int thirdSide = 10;
+            int thirdSide = 15;
 
             string expected = "At least one side of your triangle has a zero length and is thus invalid";
 
@@ -211,12 +211,12 @@ namespace TriangleTest
         }
 
         [Test]
-        public void InvalidTriangle_Input10and0and9_OutputInvalidTriangleWith0()
+        public void TriangleSolverInvalidTriangle_Input17and0and16_OutputInvalidTriangleWith0()
         {
             //Arange
-            int firstSide = 10;
+            int firstSide = 17;
             int secondSide = 0;
-            int thirdSide = 9;
+            int thirdSide = 16;
 
             string expected = "At least one side of your triangle has a zero length and is thus invalid";
 
@@ -229,12 +229,12 @@ namespace TriangleTest
 
         // 3 Tests for Verifying an Invalid Response (other than a zero length)
         [Test]
-        public void InvalidTriangle_Input5and3and9_OutputInvalidTriangle()
+        public void TriangleSolverInvalidTriangle_Input6and4and10_OutputInvalidTriangle()
         {
             //Arange
-            int firstSide = 5;
-            int secondSide = 3;
-            int thirdSide = 9;
+            int firstSide = 6;
+            int secondSide = 4;
+            int thirdSide = 10;
 
             string expected = "A triangle cannot be formed with those numbers"; ;
 
@@ -246,12 +246,12 @@ namespace TriangleTest
         }
 
         [Test]
-        public void InvalidTriangle_Input2and3and5_OutputInvalidTriangle()
+        public void TriangleSolverInvalidTriangle_Input3and4and7_OutputInvalidTriangle()
         {
             //Arange
-            int firstSide = 2;
-            int secondSide = 3;
-            int thirdSide = 5;
+            int firstSide = 3;
+            int secondSide = 4;
+            int thirdSide = 7;
 
             string expected = "A triangle cannot be formed with those numbers"; ;
 
@@ -263,12 +263,12 @@ namespace TriangleTest
         }
 
         [Test]
-        public void InvalidTriangle_Input10and10and30_OutputInvalidTriangle()
+        public void  TriangleSolverInvalidTriangle_Input10and10and45_OutputInvalidTriangle()
         {
             //Arange
             int firstSide = 10;
             int secondSide = 10;
-            int thirdSide = 30;
+            int thirdSide = 45;
 
             string expected = "A triangle cannot be formed with those numbers"; ;
 
